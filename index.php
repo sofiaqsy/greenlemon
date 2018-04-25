@@ -1,7 +1,7 @@
 <?php
 
 // Variables predefinidas para el aplicativo
-define('_BASE_URL_', 'http://' . $_SERVER['HTTP_HOST'] . '/cms/');
+define('_BASE_URL_', 'http://' . $_SERVER['HTTP_HOST'] . '/greenlemon/');
 define('_BASE_FOLDER_', str_replace('index.php', '', __FILE__));
 define('_DEFAULT_CONTROLLER_', 'Inicio');
 define('_DB_CONNECTION_STRING_', 'mysql:host=127.0.0.1;dbname=greenlemon|root|');

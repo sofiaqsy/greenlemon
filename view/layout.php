@@ -44,8 +44,12 @@
 
 	    <!-- Collect the nav links, forms, and other content for toggling -->
 	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-
-
+				<form class="navbar-form navbar-right" action="<?php echo $this->BaseUrl('index.php/inicio/busqueda'); ?>" method="POST">
+					<div class="form-group">
+						<input type="text" class="form-control" name="buscar" placeholder="¿Qué está buscando?">
+						<button type="submit" data-ajax="true" class="btn btn-default">Buscar</button>
+					</div>
+				</form>
 	      <ul class="nav navbar-nav navbar-right ">
 	            <li><a style="color:white" href="#">Inicio</a></li>
 	            <li><a  style="color:white" href="<?php echo $this->BaseUrl('index.php/login'); ?>">Iniciar sesion</a></li>
@@ -56,7 +60,7 @@
 	      </ul>
 	    </div><!-- /.navbar-collapse -->
 	  </div><!-- /.container-fluid -->
-	<div class="container">
+		</div>
 </nav>
 
 <div class="container" style="margin-top:70px" >

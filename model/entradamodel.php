@@ -15,15 +15,32 @@ class EntradaModel extends DataAccessLayer
 		$this->rh = new ResponseHelper();
 	}
 
+	public function Filtro($filtro)
+	{
+		$r = null;
+		try
+		{
+			$db = $this->Link
+			          ->prepare("SELECT * FROM entrada WHERE Tipo = 2 AND (Nombre LIKE '%$filtro%' OR Descripcion LIKE '%$filtro%')  ORDER BY Fecha DESC LIMIT 20");
+
+			$db->execute();
+			$r = $db->fetchAll(PDO::FETCH_OBJ);
+		} catch (Exception $e) {
+			BaseHelper::ELog($e);
+		}
+		//echo var_dump($r);
+		return $r;
+	}
+
 	public function Ultimos($tipo=2)
 	{
 		$r = null;
-		
-		try 
+
+		try
 		{
 			$db = $this->Link
 			          ->prepare("SELECT * FROM entrada WHERE Tipo = $tipo ORDER BY Fecha DESC LIMIT 20");
-			          
+
 			$db->execute();
 			$r = $db->fetchAll(PDO::FETCH_OBJ);
 		} catch (Exception $e) {
@@ -36,7 +53,7 @@ class EntradaModel extends DataAccessLayer
 	public function Listar($tipo)
 	{
 
-		try 
+		try
 		{
 			$this->jq->Config(
 				$this->Link->prepare("SELECT COUNT(*) FROM entrada WHERE Tipo = $tipo")
@@ -50,7 +67,7 @@ class EntradaModel extends DataAccessLayer
 		        $entradas[] = (object) $row;
 		    }
 
-			$this->jq->DataSource($entradas);			
+			$this->jq->DataSource($entradas);
 		} catch (Exception $e) {
 			BaseHelper::ELog($e);
 		}
@@ -61,12 +78,12 @@ class EntradaModel extends DataAccessLayer
 	public function Obtener($id)
 	{
 		$r = null;
-		
-		try 
+
+		try
 		{
 			$db = $this->Link
 			          ->prepare("SELECT * FROM entrada WHERE id = ? AND Eliminado = 0");
-			          
+
 
 			$db->execute(array($id));
 			$r = $db->fetch(PDO::FETCH_OBJ);
@@ -79,7 +96,7 @@ class EntradaModel extends DataAccessLayer
 
 	public function Registrar($data, $file = null)
 	{
-		try 
+		try
 		{
 			if(!is_null($file))
 			{
@@ -98,8 +115,8 @@ class EntradaModel extends DataAccessLayer
 				array(
 					$data->Nombre,
 					$data->Tipo,
-					$data->Descripcion, 
-					$data->Contenido, 
+					$data->Descripcion,
+					$data->Contenido,
 					$data->Tags,
 					$data->Imagen,
 					BaseHelper::GetDateTime())
@@ -132,7 +149,7 @@ class EntradaModel extends DataAccessLayer
 
 	public function Actualizar($data, $file = null)
 	{
-		try 
+		try
 		{
 			if(!is_null($file))
 			{
@@ -145,20 +162,20 @@ class EntradaModel extends DataAccessLayer
 				$this->rh->href = 'self';
 			}
 
-			$sql = "UPDATE entrada SET 
-					Nombre      = ?, 
+			$sql = "UPDATE entrada SET
+					Nombre      = ?,
 					Descripcion = ?,
-					Contenido   = ?, 
+					Contenido   = ?,
 					Tags        = ?
 					" . ($file != null ? ",Imagen = '" . $data->Imagen . "'" : "") . " WHERE id = ?";
 
 			$this->Link->prepare($sql)
 			     ->execute(
 				array(
-					$data->Nombre, 
-					$data->Descripcion, 
-					$data->Contenido, 
-					$data->Tags, 
+					$data->Nombre,
+					$data->Descripcion,
+					$data->Contenido,
+					$data->Tags,
 					$data->id)
 				);
 
@@ -190,7 +207,7 @@ class EntradaModel extends DataAccessLayer
 
 	public function Eliminar($id)
 	{
-		try 
+		try
 		{
 			$this->Link->prepare(
 				"DELETE FROM categoria WHERE id = ?"
@@ -209,7 +226,7 @@ class EntradaModel extends DataAccessLayer
 
 	public function Lectura($id)
 	{
-		try 
+		try
 		{
 			$this->Link->prepare(
 				"UPDATE entrada SET Lectura = (Lectura + 1) WHERE id = ?"

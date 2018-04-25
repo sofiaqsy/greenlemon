@@ -15,10 +15,17 @@
 			$this->LoadView();
 		}
 
+		public function Busqueda()
+		{
+			$this->Attach = $this->em->Filtro($_REQUEST['buscar']);
+			//echo var_dump($this->Attach); exit;
+			$this->LoadView();
+		}
+
 		public function Entrada()
 		{
 			$this->Layout = false;
-			
+
 			$this->em->Lectura($_REQUEST['id']);
 			$this->Attach = $this->em->Obtener($_REQUEST['id']);
 			$this->LoadView();
