@@ -23,8 +23,8 @@
 
 		public function Ver()
 		{
-			$this->Attach['Entrada'] = isset($_REQUEST['id']) ? 
-											$this->em->Obtener($_REQUEST['id']) : 
+			$this->Attach['Entrada'] = isset($_REQUEST['id']) ?
+											$this->em->Obtener($_REQUEST['id']) :
 											BaseHelper::GetEntity('entrada');
 
 			// Si el request tipo existe lo seteamos
@@ -50,7 +50,7 @@
 				$rh = $this->em->Actualizar($entity, isset($_FILES['upload']) ? $_FILES['upload'] : null);
 			}
 
-			echo json_encode($rh);	
+			echo json_encode($rh);
 		}
 
 		public function Categorias()
@@ -62,11 +62,11 @@
 			if($this->Attach['action'] == 'listar')
 			{
 				$this->Attach['Categorias'] = $this->cm->Listar();
-				$this->Attach['Relaciones'] = $_REQUEST['entrada_id'] > 0 
-													? $this->cm->Relaciones($_REQUEST['entrada_id']) 
+				$this->Attach['Relaciones'] = $_REQUEST['entrada_id'] > 0
+													? $this->cm->Relaciones($_REQUEST['entrada_id'])
 													: array();
 				$this->LoadView();
-			}				
+			}
 
 			if($this->Attach['action'] == 'ver')
 			{
@@ -80,7 +80,7 @@
 												BaseHelper::ParseRequestParameterToEntity(
 													BaseHelper::GetEntity('categoria'), $_POST)));
 			}
-				
+
 			if($this->Attach['action'] == 'actualizar')
 			{
 				echo json_encode($this->cm->Actualizar(

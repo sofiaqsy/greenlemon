@@ -44,14 +44,9 @@
 
 	    <!-- Collect the nav links, forms, and other content for toggling -->
 	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-				<form class="navbar-form navbar-right" action="<?php echo $this->BaseUrl('index.php/inicio/busqueda'); ?>" method="POST">
-					<div class="form-group">
-						<input type="text" class="form-control" name="buscar" placeholder="¿Qué está buscando?">
-						<button type="submit" data-ajax="true" class="btn btn-default">Buscar</button>
-					</div>
-				</form>
+
 	      <ul class="nav navbar-nav navbar-right ">
-	            <li><a style="color:white" href="<?php echo $this->BaseUrl('/'); ?>">Inicio</a></li>
+	            <li><a style="color:white" href="<?php echo $this->BaseUrl(''); ?>">Inicio</a></li>
 						<?php if(!isset($_SESSION["loggedin"])):?>
 	            <li><a  style="color:white" href="<?php echo $this->BaseUrl('index.php/login'); ?>">Iniciar sesion</a></li>
 						<?php else: ?>
@@ -67,16 +62,13 @@
 		</div>
 </nav>
 
-<div class="container" style="margin-top:110px; min-height: 640px"; >
-
-			<?php
-			//Aqui cargamos la vista actual
-			require_once $this->View;
-			?>
-
+		<div class="container" style="margin-top:110px; min-height: 640px"; >
+				<?php
+				//Aqui cargamos la vista actual
+				require_once $this->View;
+				?>
 			<div class="clearfix"></div>
 		</div>
-	</div>
 
 	<section id="footer">
 		<div class="container">

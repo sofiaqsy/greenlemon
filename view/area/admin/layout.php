@@ -6,6 +6,8 @@
 
 	    <link href="<?php echo $this->BaseUrl('assets/admin/css/bootstrap.css'); ?>" rel="stylesheet" />
 	    <link href="<?php echo $this->BaseUrl('assets/admin/css/bootstrap-theme.min.css'); ?>" rel="stylesheet" />
+			<link href="<?php echo $this->BaseUrl('assets/admin/css/styleAdmin.css'); ?>" rel="stylesheet" />
+
 
 	    <!-- jqgrid -->
 	    <link href="<?php echo $this->BaseUrl('assets/admin/js/jqGrid/css/ui.jqgrid.css'); ?>" rel="stylesheet" />
@@ -66,34 +68,8 @@
 				</div>
 		</nav>
 
-		<div class="container" style="margin-top:110px; min-height: 640px">
-			<nav class="navbar navbar-default" role="navigation" >
-			  <div class="container-fluid">
-			    <!-- Brand and toggle get grouped for better mobile display -->
-			    <div class="navbar-header">
-			      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-			        <span class="sr-only">Toggle navigation</span>
-			        <span class="icon-bar"></span>
-			        <span class="icon-bar"></span>
-			        <span class="icon-bar"></span>
-			      </button>
-			    </div>
-
-			    <!-- Collect the nav links, forms, and other content for toggling -->
-			    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-			      <ul class="nav navbar-nav navbar-left">
-			        <li><a href="">Inicio</a></li>
-							<li><a href="<?php echo $this->BaseUrl('index.php/admin/entrada/listar/?tipo=1'); ?>s">Paginas</a></li>
-							<li><a href="<?php echo $this->BaseUrl('index.php/admin/entrada/listar/?tipo=2'); ?>">Blogs</a></li>
-
-			      </ul>
-			    </div><!-- /.navbar-collapse -->
-			  </div><!-- /.container-fluid -->
-			</nav>
-
+		<div class="container" style="margin-top:110px; min-height: 790px">
 			<?php require_once $this->View; ?>
-
-			<hr />
 		</div>
 		<div class="text-center">
 			Super Technology SAC.  •  Av. Jorge Chavez 657 - Lima  •  <a href="atencionalcliente@supertechnology.com">atencionalcliente@supertechnology.com</a>  •  Telf. (01) 2614823 - (084) 233111
