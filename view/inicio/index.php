@@ -1,7 +1,7 @@
 
 <div class="col-md-3">
   <h1>titulo </h1>
-  <form style="margin-left:-15px" class="navbar-form navbar-right" action="<?php echo $this->BaseUrl('index.php/inicio/busqueda'); ?>" method="POST">
+  <form style="margin-left:-15px" class="" action="<?php echo $this->BaseUrl('index.php/inicio/busqueda'); ?>" method="POST">
     <div class="form-group">
       <input type="text" class="form-control" name="buscar"  value="<?php echo isset($this->Attach['buscar']) ? $this->Attach['buscar'] : NULl   ?>"placeholder="¿Qué está buscando?">
       <button type="submit" data-ajax="true" class="btn btn-default">Buscar</button>
