@@ -32,7 +32,7 @@
 		        </div>
 							<?php if(!empty($this->Attach['errors'])): ?>
 								<div class="alert alert-danger" role="alert">
-								<strong>Oh snap!</strong> <a href="#" class="alert-link">Error</a> <?php echo $this->Attach['errors']; ?>
+								<strong>Oh!</strong> <a href="#" class="alert-link">Error</a> <?php echo $this->Attach['errors']; ?>
 								</div>
 							<?php endif; ?>
 		        <div class="checkbox pull-right">

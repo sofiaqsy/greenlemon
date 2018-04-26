@@ -11,15 +11,18 @@
 
 		public function Index()
 		{
-			$this->Attach = $this->em->Ultimos();
+			$data = $this->em->Ultimos();
+			$this->Attach = array('data' => $data);
 			$this->LoadView();
 		}
 
 		public function Busqueda()
 		{
-			$this->Attach = $this->em->Filtro($_REQUEST['buscar']);
+
+			$data = $this->em->Filtro($_REQUEST['buscar']);
+			$this->Attach = array('data' => $data , 'buscar' => $_REQUEST['buscar']);
 			//echo var_dump($this->Attach); exit;
-			$this->LoadView();
+			$this->LoadView('inicio/index');
 		}
 
 		public function Entrada()

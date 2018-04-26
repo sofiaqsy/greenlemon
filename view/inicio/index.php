@@ -3,27 +3,30 @@
   <h1>titulo </h1>
   <form style="margin-left:-15px" class="navbar-form navbar-right" action="<?php echo $this->BaseUrl('index.php/inicio/busqueda'); ?>" method="POST">
     <div class="form-group">
-      <input type="text" class="form-control" name="buscar" placeholder="¿Qué está buscando?">
+      <input type="text" class="form-control" name="buscar"  value="<?php echo isset($this->Attach['buscar']) ? $this->Attach['buscar'] : NULl   ?>"placeholder="¿Qué está buscando?">
       <button type="submit" data-ajax="true" class="btn btn-default">Buscar</button>
     </div>
   </form>
 </div>
 <div class="col-md-9">
   <div id="news" class="row">
-   <?php foreach($this->Attach as $k => $e): ?>
-
-  	<div class="item col-md-4 col-sm-6 col-xs-12" style="cursor:pointer;" data-id="<?php echo $e->id; ?>" data-nombre="<?php echo htmlspecialchars($e->Nombre); ?>">
-  		<div class="well well-sm">
-  			<img src="<?php echo $this->BaseUrl('uploads/' . $e->Imagen); ?>" class="img-thumbnail" />
-  			<h3><?php echo $e->Nombre; ?></h3>
-  			<p><?php echo $e->Descripcion; ?></p>
-  		</div>
-  	</div>
-   <?php endforeach; ?>
+    <?php if(!empty($this->Attach['data'])) : ?>
+     <?php foreach($this->Attach['data'] as $k => $e): ?>
+    	<div class="item col-md-4 col-sm-6 col-xs-12" style="cursor:pointer;" data-id="<?php echo $e->id; ?>" data-nombre="<?php echo htmlspecialchars($e->Nombre); ?>">
+    		<div class="well well-sm">
+    			<img src="<?php echo $this->BaseUrl('uploads/' . $e->Imagen); ?>" class="img-thumbnail" />
+    			<h3><?php echo $e->Nombre; ?></h3>
+    			<p><?php echo $e->Descripcion; ?></p>
+    		</div>
+    	</div>
+     <?php endforeach; ?>
+   <?php else : ?>
+     <div class="alert alert-default" role="alert" style="margin-top:66px">
+     <strong>Oh!</strong> <a href="#" class="alert-link">Error</a> No se encontraron datos
+     </div>
+   <?php endif; ?>
   </div>
 </div>
-
-
 
 <script>
 	$(document).ready(function(){

@@ -27,7 +27,7 @@
 				 $_SESSION['start'] = time();
 				 $_SESSION['expire'] = $_SESSION['start'] + (5 * 60);
 
-				 header ("Location: /cms/index.php");
+				 header ("Location: /cms/index.php/admin/inicio");
 				}else{
 					$this->Attach = array('errors' => 'Contraseña Incorrecta', 'email' => $_POST['email'] );
 					$this->LoadView('login/index');
