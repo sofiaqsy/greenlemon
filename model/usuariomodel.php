@@ -29,20 +29,21 @@ class UsuarioModel extends DataAccessLayer
 		return $response;
 	}
 
-  public function Recuperar($id)
+  public function getUserByLogin($correo, $contrasena)
 	{
+		$response = null;
 		try
 		{
-			$this->Link->prepare(
-				"DELETE FROM categoria WHERE id = ?"
-			)->execute(
-				array(
-					$id)
-				);
-			$this->rh->SetResponse(true);
+			$db = $this->Link
+			          ->prepare("SELECT * FROM usuario WHERE correo = ? AND contrasena = ? ");
+
+			$db->execute(array($correo, $contrasena));
+			$response = $db->fetch(PDO::FETCH_OBJ);
 		} catch (Exception $e) {
 			BaseHelper::ELog($e);
 		}
+
+		return $response;
 
 		return $this->rh;
 	}

@@ -27,9 +27,47 @@
 		<script>
 			function base_url(url) { return '<?php echo $this->BaseUrl('index.php/admin/'); ?>' + url; } function redirect(href) { window.location.href = '<?php echo $this->BaseUrl('index.php/admin/'); ?>' + href; }
 		</script>
+		<nav class="navbar navbar-default navbar-fixed-top" style="padding :20px; background-color: #304554;">
+			<div class="container" >
+				<div class="container-fluid">
+					<!-- Brand and toggle get grouped for better mobile display -->
+					<div class="navbar-header" >
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<a class="navbar-brand text-white"  style="color:white" href="#">Green Lemon</a>
+					</div>
 
-		<div class="container">
-			<nav class="navbar navbar-default" role="navigation">
+					<!-- Collect the nav links, forms, and other content for toggling -->
+					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+						<form class="navbar-form navbar-right" action="<?php echo $this->BaseUrl('index.php/inicio/busqueda'); ?>" method="POST">
+							<div class="form-group">
+								<input type="text" class="form-control" name="buscar" placeholder="¿Qué está buscando?">
+								<button type="submit" data-ajax="true" class="btn btn-default">Buscar</button>
+							</div>
+						</form>
+						<ul class="nav navbar-nav navbar-right ">
+									<li><a style="color:white" href="<?php echo $this->BaseUrl('/'); ?>">Inicio</a></li>
+								<?php if(!isset($_SESSION["loggedin"])):?>
+									<li><a  style="color:white" href="<?php echo $this->BaseUrl('index.php/login'); ?>">Iniciar sesion</a></li>
+								<?php else: ?>
+									<li><a  style="color:white" href="<?php echo $this->BaseUrl('index.php/admin/inicio'); ?>"><?php echo $_SESSION["nombre"]?></a></li>
+									<li><a  style="color:WHITE;background-color:#f15500 ;border-radius: 10px ;font-weight: bold; margin: 5px 20px 5px 0px ; padding : 10px 35px" href="<?php echo $this->BaseUrl('index.php/login/logout'); ?>">SALIR</a></li>
+								<?php endif; ?>
+
+								</ul>
+							</li>
+						</ul>
+					</div><!-- /.navbar-collapse -->
+				</div><!-- /.container-fluid -->
+				</div>
+		</nav>
+
+		<div class="container" style="margin-top:110px; min-height: 640px">
+			<nav class="navbar navbar-default" role="navigation" >
 			  <div class="container-fluid">
 			    <!-- Brand and toggle get grouped for better mobile display -->
 			    <div class="navbar-header">
@@ -39,22 +77,15 @@
 			        <span class="icon-bar"></span>
 			        <span class="icon-bar"></span>
 			      </button>
-			      <a class="navbar-brand" href="/cms/index.php/admin/inicio">Inicio Backend</a>
 			    </div>
 
 			    <!-- Collect the nav links, forms, and other content for toggling -->
 			    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-			      <ul class="nav navbar-nav">
-			        <li class="dropdown">
-			          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Entradas <b class="caret"></b></a>
-			          <ul class="dropdown-menu">
-			            <li><a href="<?php echo $this->BaseUrl('index.php/admin/entrada/listar/?tipo=1'); ?>">Listar Páginas</a></li>
-			            <li><a href="<?php echo $this->BaseUrl('index.php/admin/entrada/listar/?tipo=2'); ?>">Listar Blogs</a></li>
-			          </ul>
-			        </li>
-			      </ul>
-			      <ul class="nav navbar-nav navbar-right">
-			        <li><a href="<?php echo $this->BaseUrl(''); ?>"> >>> Ir al frontend <<< </a></li>
+			      <ul class="nav navbar-nav navbar-left">
+			        <li><a href="">Inicio</a></li>
+							<li><a href="<?php echo $this->BaseUrl('index.php/admin/entrada/listar/?tipo=1'); ?>s">Paginas</a></li>
+							<li><a href="<?php echo $this->BaseUrl('index.php/admin/entrada/listar/?tipo=2'); ?>">Blogs</a></li>
+
 			      </ul>
 			    </div><!-- /.navbar-collapse -->
 			  </div><!-- /.container-fluid -->
@@ -63,10 +94,9 @@
 			<?php require_once $this->View; ?>
 
 			<hr />
-
-			<div class="text-center">
-				Super Technology SAC.  •  Av. Jorge Chavez 657 - Lima  •  <a href="atencionalcliente@supertechnology.com">atencionalcliente@supertechnology.com</a>  •  Telf. (01) 2614823 - (084) 233111
-			</div>
+		</div>
+		<div class="text-center">
+			Super Technology SAC.  •  Av. Jorge Chavez 657 - Lima  •  <a href="atencionalcliente@supertechnology.com">atencionalcliente@supertechnology.com</a>  •  Telf. (01) 2614823 - (084) 233111
 		</div>
 
 	    <script src="<?php echo $this->BaseUrl('assets/admin/js/bootstrap.min.js'); ?>"></script>

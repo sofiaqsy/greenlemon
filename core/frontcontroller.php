@@ -71,7 +71,7 @@ class FrontController
 			// Verificamos si la acción existe
 			if(!method_exists($c, $this->Action))
 				ErrorController::Show(2, $this);
-
+				
 			// Ejecutamos la acción actual
 			$c->$AccionActual();
 		}

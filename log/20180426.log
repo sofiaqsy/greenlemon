@@ -1,0 +1,19 @@
+
+[Thu, 26 Apr 2018 16:39:21 +0100] #0 /Applications/XAMPP/xamppfiles/htdocs/cms/model/entradamodel.php(66): PDO->query('SELECT * FROM e...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/cms/controller/admin/entradacontroller.php(20): EntradaModel->Listar('1s')
+#2 /Applications/XAMPP/xamppfiles/htdocs/cms/core/frontcontroller.php(76): EntradaController->Listar()
+#3 /Applications/XAMPP/xamppfiles/htdocs/cms/index.php(26): FrontController->__CONSTRUCT()
+#4 {main}
+SQLSTATE[42S22]: Column not found: 1054 Unknown column '1s' in 'where clause'
+[Thu, 26 Apr 2018 16:39:31 +0100] #0 /Applications/XAMPP/xamppfiles/htdocs/cms/model/entradamodel.php(66): PDO->query('SELECT * FROM e...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/cms/controller/admin/entradacontroller.php(20): EntradaModel->Listar('1s')
+#2 /Applications/XAMPP/xamppfiles/htdocs/cms/core/frontcontroller.php(76): EntradaController->Listar()
+#3 /Applications/XAMPP/xamppfiles/htdocs/cms/index.php(26): FrontController->__CONSTRUCT()
+#4 {main}
+SQLSTATE[42S22]: Column not found: 1054 Unknown column '1s' in 'where clause'
+[Thu, 26 Apr 2018 16:40:19 +0100] #0 /Applications/XAMPP/xamppfiles/htdocs/cms/model/entradamodel.php(66): PDO->query('SELECT * FROM e...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/cms/controller/admin/entradacontroller.php(20): EntradaModel->Listar('1s')
+#2 /Applications/XAMPP/xamppfiles/htdocs/cms/core/frontcontroller.php(76): EntradaController->Listar()
+#3 /Applications/XAMPP/xamppfiles/htdocs/cms/index.php(26): FrontController->__CONSTRUCT()
+#4 {main}
+SQLSTATE[42S22]: Column not found: 1054 Unknown column '1s' in 'where clause'

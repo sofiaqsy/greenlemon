@@ -16,7 +16,6 @@
 		    <div class="main">
 
 		      <h3>Ingrese su cuenta, o <a href="#">solicite</a></h3>
-
 		      <div class="login-or">
 		        <hr class="hr-or">
 		        <span class="span-or"></span>
@@ -24,7 +23,7 @@
 		      <form  action="<?php echo $this->BaseUrl('index.php/login/login'); ?>" method="POST" role="form">
 		        <div class="form-group">
 		          <label for="inputUsernameEmail">Email</label>
-		          <input type="text" name="email" class="form-control" id="inputUsernameEmail">
+		          <input type="text" name="email" value="<?php echo isset($this->Attach['email']) ? $this->Attach['email'] : NULL ?>" class="form-control" id="inputUsernameEmail">
 		        </div>
 		        <div class="form-group">
 		          <a class="pull-right" href="#">Olvidaste tu contraseña?</a>

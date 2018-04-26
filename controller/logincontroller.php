@@ -16,19 +16,32 @@
 
 		public function Login()
 		{
-			$this->Layout = false;
 			$data = $this->em->Pass($_POST['email']);
 			if($data){
 				if($data->contrasena == $_POST['contrasena'] ){
-					header ("Location: /cms/index.php/admin/inicio");
+				 $user = $this->em->getUserByLogin($_POST['email'], $_POST['contrasena']);
+
+				 $_SESSION['loggedin'] = true;
+				 $_SESSION['idusuario'] = $user->idusuario;
+				 $_SESSION['nombre'] = $user->nombre;
+				 $_SESSION['start'] = time();
+				 $_SESSION['expire'] = $_SESSION['start'] + (5 * 60);
+
+				 header ("Location: /cms/index.php");
 				}else{
-					$this->Attach = array('errors' => 'Contraseña Incorrecta');
+					$this->Attach = array('errors' => 'Contraseña Incorrecta', 'email' => $_POST['email'] );
 					$this->LoadView('login/index');
 				}
 			}else{
-				$this->Attach = array('errors' => 'Usuario no registrado');
+				$this->Attach = array('errors' => 'Usuario no registrado', 'email' => $_POST['email'] );
 				$this->LoadView('login/index');
 			}
+		}
+
+		public function Logout()
+		{
+			session_destroy();
+			header ("Location: /cms/index.php");
 		}
 
 		public function Validad()

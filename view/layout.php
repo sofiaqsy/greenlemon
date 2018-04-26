@@ -51,10 +51,14 @@
 					</div>
 				</form>
 	      <ul class="nav navbar-nav navbar-right ">
-	            <li><a style="color:white" href="#">Inicio</a></li>
+	            <li><a style="color:white" href="<?php echo $this->BaseUrl('/'); ?>">Inicio</a></li>
+						<?php if(!isset($_SESSION["loggedin"])):?>
 	            <li><a  style="color:white" href="<?php echo $this->BaseUrl('index.php/login'); ?>">Iniciar sesion</a></li>
-							<li><a  style="color:white" href="<?php echo $this->BaseUrl('index.php/admin/inicio'); ?>">Admin</a></li>
-							<li><a  style="color:white" href="#">Administrar sitio</a></li>
+						<?php else: ?>
+							<li><a  style="color:white" href="<?php echo $this->BaseUrl('index.php/admin/inicio'); ?>"><?php echo $_SESSION["nombre"]?></a></li>
+							<li><a  style="color:WHITE;background-color:#f15500 ;border-radius: 10px ;font-weight: bold; margin: 5px 20px 5px 0px ; padding : 10px 35px" href="<?php echo $this->BaseUrl('index.php/login/logout'); ?>">SALIR</a></li>
+						<?php endif; ?>
+
 	          </ul>
 	        </li>
 	      </ul>
@@ -63,7 +67,7 @@
 		</div>
 </nav>
 
-<div class="container" style="margin-top:70px" >
+<div class="container" style="margin-top:110px; min-height: 640px"; >
 
 			<?php
 			//Aqui cargamos la vista actual
@@ -87,7 +91,7 @@
 				</div>
 			</div>
 
-			<div class="row">
+			<div class="row" >
 				<div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white">
 					<p style="color:white" >National Transaction Corporation is a Registered MSP/ISO of Elavon, Inc. Georgia [a wholly owned subsidiary of U.S. Bancorp, Minneapolis, MN]</p>
 					<p  style="color:white" class="h6">&copy All right Reversed.<a class="text-green ml-2" href="https://www.sunlimetech.com" target="_blank">Sunlimetech</a></p>
@@ -117,9 +121,8 @@ section .section-title {
 #footer {
 	background: #304554 !important;
   width: 100%;
-  height: 30px;
+  height: 200px;
   color: white;
-	position:fixed;
 	left:0px;
 	bottom:0px;
 
