@@ -23,14 +23,15 @@
 		{
 
 			$data = $this->em->Filtro($_REQUEST['buscar']);
-			$this->Attach = array('data' => $data , 'buscar' => $_REQUEST['buscar']);
+			$data2 = $this->em->categoria();
+			$this->Attach = array('data' => $data , 'buscar' => $_REQUEST['buscar'] ,'data2'=> $data2);
 			//echo var_dump($this->Attach); exit;
 			$this->LoadView('inicio/index');
 		}
 
 		public function BusquedaCate()
 		{
-			
+
 			$data = $this->em->Filtrocate($_REQUEST['buscarcate']);
 			$data2 = $this->em->categoria();
 			$this->Attach = array('data' => $data ,'data2'=> $data2, 'buscarcate' => $_REQUEST['buscarcate']);

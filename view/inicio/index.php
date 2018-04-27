@@ -1,35 +1,39 @@
 
 <div class="col-md-3">
 
-  <h1>titulo </h1>
+  <h3>BUSCAR</h3>
   <form style="margin-left:-15px" class="" action="<?php echo $this->BaseUrl('index.php/inicio/busqueda'); ?>" method="POST">
     <div class="form-group">
-      <input type="text" class="form-control" name="buscar"  value="<?php echo isset($this->Attach['buscar']) ? $this->Attach['buscar'] : NULl   ?>"placeholder="¿Qué está buscando?">
-      <button type="submit" data-ajax="true" class="btn btn-default">Buscar</button>
-
+      <div class="col-md-8 col-xs-12">
+        <input type="text" class="form-control" name="buscar"  value="<?php echo isset($this->Attach['buscar']) ? $this->Attach['buscar'] : NULl   ?>"placeholder="¿Qué está buscando?">
+      </div>
+      <div class="col-md-4 col-xs-12">
+        <button type="submit" data-ajax="true" class="btn btn-default">Buscar</button>
+      </div><br>
     </div>
-  </form>
-  </div>
-  <div>
-  <h1>categoria </h1>
-  <form style="margin-left:-15px" class="navbar-form navbar-right" action="<?php echo $this->BaseUrl('index.php/inicio/BusquedaCate'); ?>" method="POST">
+  </form><br>
+  <h3>CATEGORIAS</h3>
+  <form style="margin-left:-15px" class="" action="<?php echo $this->BaseUrl('index.php/inicio/BusquedaCate'); ?>" method="POST">
     <div class="form-group">
-      <select name="buscarcate" id="" class="form-control">
-        <option value="0">Seleccionar</option>
-        <?php foreach($this->Attach['data2'] as $k => $e): ?>
-          <option
-            value=<?php echo $e->id; ?>
-            <?php echo isset($this->Attach['buscarcate']) ? ($this->Attach['buscarcate']==$e->id)?'selected':'' : ''?>
-          >
-            <?php echo $e->Nombre; ?>
-          </option>
-        <?php endforeach; ?>
-      </select>
-      <button type="submit" data-ajax="true" class="btn btn-default">Buscar</button>
+      <div class="col-md-8 col-xs-12">
+        <select name="buscarcate" id="" class="form-control">
+          <option value="0">Seleccionar</option>
+          <?php foreach($this->Attach['data2'] as $k => $e): ?>
+            <option
+              value=<?php echo $e->id; ?>
+              <?php echo isset($this->Attach['buscarcate']) ? ($this->Attach['buscarcate']==$e->id)?'selected':'' : ''?>
+            >
+              <?php echo $e->Nombre; ?>
+            </option>
+          <?php endforeach; ?>
+        </select>
+      </div>
+      <div class="col-md-4 col-xs-12">
+        <button type="submit" data-ajax="true" class="btn btn-default">Buscar</button>
+      </div><br>
     </div>
   </form>
   </div>
-</div>
 
 <div class="col-md-9">
   <div id="news" class="row">

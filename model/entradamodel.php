@@ -45,14 +45,11 @@ class EntradaModel extends DataAccessLayer
 			BaseHelper::ELog($e);
 		}
 		//echo var_dump($r);
-		//select * from entrada e INNER JOIN entradacategoria p on e.id=p.Entrada_id 
+		//select * from entrada e INNER JOIN entradacategoria p on e.id=p.Entrada_id
 		//INNER JOIN categoria c on c.id=p.Categoria_id
-
-<<<<<<< HEAD
 
 		return $r;
 	}
-=======
 	public function Vistos()
 	{
 		$r = null;
@@ -92,7 +89,6 @@ class EntradaModel extends DataAccessLayer
 
 	}
 
->>>>>>> 8d6f91765b8866cf83019513cdc2196c558ab524
 	public function Ultimos($tipo=2)
 	{
 		$r = null;
