@@ -57,7 +57,7 @@ class EntradaModel extends DataAccessLayer
 		try
 		{
 			$db = $this->Link
-			          ->prepare("SELECT Nombre,Lectura FROM entrada ORDER BY Lectura DESC LIMIT 2");
+			          ->prepare("SELECT Nombre,Lectura,id FROM entrada ORDER BY Lectura DESC LIMIT 2");
 
 			$db->execute();
 			$r = $db->fetchAll(PDO::FETCH_OBJ);
