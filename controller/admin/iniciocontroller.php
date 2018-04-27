@@ -11,7 +11,7 @@
 		public function Index()
 		{
 			$publicaciones = json_decode(json_encode($this->em->Cantidad()), true);
-			$vistas = 3;
+			$vistas = json_decode(json_encode($this->em->Vistos()), true);
 
 			$this->Attach = array('publicaciones' => $publicaciones, 'vistas' => $vistas);
 			$this->LoadView();

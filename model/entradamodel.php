@@ -32,6 +32,24 @@ class EntradaModel extends DataAccessLayer
 		return $r;
 	}
 
+	public function Vistos()
+	{
+		$r = null;
+
+		try
+		{
+			$db = $this->Link
+			          ->prepare("SELECT Nombre,Lectura FROM entrada ORDER BY Lectura DESC LIMIT 2");
+
+			$db->execute();
+			$r = $db->fetchAll(PDO::FETCH_OBJ);
+		} catch (Exception $e) {
+			BaseHelper::ELog($e);
+		}
+
+		return $r;
+	}
+
 	public function Cantidad()
 	{
 		$r = null;
