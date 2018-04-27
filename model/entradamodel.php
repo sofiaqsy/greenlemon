@@ -48,9 +48,51 @@ class EntradaModel extends DataAccessLayer
 		//select * from entrada e INNER JOIN entradacategoria p on e.id=p.Entrada_id 
 		//INNER JOIN categoria c on c.id=p.Categoria_id
 
+<<<<<<< HEAD
 
 		return $r;
 	}
+=======
+	public function Vistos()
+	{
+		$r = null;
+
+		try
+		{
+			$db = $this->Link
+			          ->prepare("SELECT Nombre,Lectura FROM entrada ORDER BY Lectura DESC LIMIT 2");
+
+			$db->execute();
+			$r = $db->fetchAll(PDO::FETCH_OBJ);
+		} catch (Exception $e) {
+			BaseHelper::ELog($e);
+		}
+
+		return $r;
+	}
+
+	public function Cantidad()
+	{
+		$r = null;
+
+		try
+		{
+			$db = $this->Link
+			          ->prepare("SELECT COUNT(*) FROM entrada WHERE Tipo=1
+									UNION
+									SELECT COUNT(*) FROM entrada WHERE Tipo=2");
+
+			$db->execute();
+			$r = $db->fetchAll(PDO::FETCH_OBJ);
+		} catch (Exception $e) {
+			BaseHelper::ELog($e);
+		}
+
+		return $r;
+
+	}
+
+>>>>>>> 8d6f91765b8866cf83019513cdc2196c558ab524
 	public function Ultimos($tipo=2)
 	{
 		$r = null;
