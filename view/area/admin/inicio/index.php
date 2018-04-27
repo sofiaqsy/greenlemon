@@ -19,8 +19,8 @@
 	  </ul>
 	  <div class="panel-heading">Publicaciones populares</div>
 	  <ul class="list-group">
-	    <li class="list-group-item"><a href=" <?php echo $this->BaseUrl('index.php/admin/entrada/ver/?id='.$this->Attach['vistas'][0]['id']) ;?> "><?php echo $this->Attach['vistas'][0]['Nombre'];?> </a> <span class="badge pull-right"><?php echo $this->Attach['vistas'][0]['Lectura'];?></span></li>
-	    <li class="list-group-item"><a href=" <?php echo $this->BaseUrl('index.php/admin/entrada/ver/?id='.$this->Attach['vistas'][1]['id']) ;?> "><?php echo $this->Attach['vistas'][1]['Nombre'];?> </a> <span class="badge pull-right"><?php echo $this->Attach['vistas'][1]['Lectura'];?></span></li>
+	    <li class="list-group-item"><a href=" <?php echo $this->BaseUrl('index.php/admin/entrada/ver/?id='.$this->Attach['vistas'][0]['id']) ;?> "><?php echo $this->Attach['vistas'][0]['Nombre'];?> </a> <span class="badge pull-right"><?php echo $this->Attach['vistas'][0]['Lectura'];?> vistas</span></li>
+	    <li class="list-group-item"><a href=" <?php echo $this->BaseUrl('index.php/admin/entrada/ver/?id='.$this->Attach['vistas'][1]['id']) ;?> "><?php echo $this->Attach['vistas'][1]['Nombre'];?> </a> <span class="badge pull-right"><?php echo $this->Attach['vistas'][1]['Lectura'];?> vistas</span></li>
 	  </ul>
 	</div>
 </div>

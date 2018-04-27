@@ -10,10 +10,14 @@
 
 		public function Index()
 		{
-			$publicaciones = json_decode(json_encode($this->em->Cantidad()), true);
-			$vistas = json_decode(json_encode($this->em->Vistos()), true);
+			if(isset($_SESSION["loggedin"])){
+				$publicaciones = json_decode(json_encode($this->em->Cantidad()), true);
+				$vistas = json_decode(json_encode($this->em->Vistos()), true);
 
-			$this->Attach = array('publicaciones' => $publicaciones, 'vistas' => $vistas);
-			$this->LoadView();
+				$this->Attach = array('publicaciones' => $publicaciones, 'vistas' => $vistas);
+				$this->LoadView();
+			}else{
+				echo 'NO PERMITIDO';
+			}
 		}
 	}
