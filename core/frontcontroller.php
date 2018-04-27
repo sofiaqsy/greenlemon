@@ -28,6 +28,7 @@ class FrontController
 			else
 			{
 				// Verificamos si es un Area
+				
 				if(is_dir( _BASE_FOLDER_ . 'controller/' . $this->Uri[2] ))
 				{
 					$this->Area = $this->Uri[2];
@@ -37,6 +38,7 @@ class FrontController
 				{
 					$this->Controller = str_replace('/', '', $this->Uri[2]);
 				}
+				
 			}
 
 			// Si se ha especificado la acción
@@ -45,7 +47,9 @@ class FrontController
 			{
 				if($this->Uri[$i] != '' && $this->Uri[$i] != '/')
 					$this->Action = str_replace('/', '', $this->Uri[$i]);
+
 			}
+
 		}
 
 		//echo var_dump($this->Uri);//ojo
@@ -54,7 +58,7 @@ class FrontController
 		{
 			// Guardamos la ruta del controlador
 			$_Controller = 'controller/' . ($this->Area == null ? '' : $this->Area . '/') . $this->Controller . 'controller.php';
-
+			
 			// Verificamos que la vista exista
 			if (! file_exists ( $_Controller ))
 				ErrorController::Show(1, $this);
@@ -64,7 +68,7 @@ class FrontController
 
 			$ControladorActual = $this->Controller . 'controller';
 			$AccionActual      = $this->Action;
-
+			
 			// Creamos una instancia del controlador actual y ejecutamos su accion
 			$c = new $ControladorActual();
 

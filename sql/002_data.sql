@@ -1,0 +1,1 @@
+INSERT INTO `categoria` (`id`, `Nombre`) VALUES (NULL, 'Playas');

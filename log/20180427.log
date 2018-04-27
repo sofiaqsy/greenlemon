@@ -1,0 +1,85 @@
+
+[Fri, 27 Apr 2018 07:52:41 +0100] #0 C:\xampp\htdocs\cms\model\entradamodel.php(43): PDOStatement->execute()
+#1 C:\xampp\htdocs\cms\controller\iniciocontroller.php(31): EntradaModel->Filtrocate(NULL)
+#2 C:\xampp\htdocs\cms\core\frontcontroller.php(80): InicioController->BusquedaCate()
+#3 C:\xampp\htdocs\cms\index.php(26): FrontController->__CONSTRUCT()
+#4 {main}
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '/INNER JOIN categoria c on c.id=p.Categoria_id WHERE p.Categoria_id=''  ORDER BY' at line 2
+[Fri, 27 Apr 2018 07:53:09 +0100] #0 C:\xampp\htdocs\cms\model\entradamodel.php(43): PDOStatement->execute()
+#1 C:\xampp\htdocs\cms\controller\iniciocontroller.php(31): EntradaModel->Filtrocate(NULL)
+#2 C:\xampp\htdocs\cms\core\frontcontroller.php(80): InicioController->BusquedaCate()
+#3 C:\xampp\htdocs\cms\index.php(26): FrontController->__CONSTRUCT()
+#4 {main}
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '/INNER JOIN categoria c on c.id=p.Categoria_id WHERE p.Categoria_id=''  ORDER BY' at line 2
+[Fri, 27 Apr 2018 07:53:12 +0100] #0 C:\xampp\htdocs\cms\model\entradamodel.php(43): PDOStatement->execute()
+#1 C:\xampp\htdocs\cms\controller\iniciocontroller.php(31): EntradaModel->Filtrocate(NULL)
+#2 C:\xampp\htdocs\cms\core\frontcontroller.php(80): InicioController->BusquedaCate()
+#3 C:\xampp\htdocs\cms\index.php(26): FrontController->__CONSTRUCT()
+#4 {main}
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '/INNER JOIN categoria c on c.id=p.Categoria_id WHERE p.Categoria_id=''  ORDER BY' at line 2
+[Fri, 27 Apr 2018 07:53:14 +0100] #0 C:\xampp\htdocs\cms\model\entradamodel.php(43): PDOStatement->execute()
+#1 C:\xampp\htdocs\cms\controller\iniciocontroller.php(31): EntradaModel->Filtrocate(NULL)
+#2 C:\xampp\htdocs\cms\core\frontcontroller.php(80): InicioController->BusquedaCate()
+#3 C:\xampp\htdocs\cms\index.php(26): FrontController->__CONSTRUCT()
+#4 {main}
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '/INNER JOIN categoria c on c.id=p.Categoria_id WHERE p.Categoria_id=''  ORDER BY' at line 2
+[Fri, 27 Apr 2018 07:54:04 +0100] #0 C:\xampp\htdocs\cms\model\entradamodel.php(43): PDOStatement->execute()
+#1 C:\xampp\htdocs\cms\controller\iniciocontroller.php(31): EntradaModel->Filtrocate(NULL)
+#2 C:\xampp\htdocs\cms\core\frontcontroller.php(80): InicioController->BusquedaCate()
+#3 C:\xampp\htdocs\cms\index.php(26): FrontController->__CONSTRUCT()
+#4 {main}
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '/INNER JOIN categoria c on c.id=p.Categoria_id WHERE p.Categoria_id=''  ORDER BY' at line 2
+[Fri, 27 Apr 2018 07:54:33 +0100] #0 C:\xampp\htdocs\cms\model\entradamodel.php(43): PDOStatement->execute()
+#1 C:\xampp\htdocs\cms\controller\iniciocontroller.php(31): EntradaModel->Filtrocate(NULL)
+#2 C:\xampp\htdocs\cms\core\frontcontroller.php(80): InicioController->BusquedaCate()
+#3 C:\xampp\htdocs\cms\index.php(26): FrontController->__CONSTRUCT()
+#4 {main}
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '/INNER JOIN categoria c on c.id=p.Categoria_id WHERE p.Categoria_id=''  ORDER BY' at line 2
+[Fri, 27 Apr 2018 07:54:41 +0100] #0 C:\xampp\htdocs\cms\model\entradamodel.php(43): PDOStatement->execute()
+#1 C:\xampp\htdocs\cms\controller\iniciocontroller.php(31): EntradaModel->Filtrocate(NULL)
+#2 C:\xampp\htdocs\cms\core\frontcontroller.php(80): InicioController->BusquedaCate()
+#3 C:\xampp\htdocs\cms\index.php(26): FrontController->__CONSTRUCT()
+#4 {main}
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '/INNER JOIN categoria c on c.id=p.Categoria_id WHERE p.Categoria_id=''  ORDER BY' at line 2
+[Fri, 27 Apr 2018 07:55:32 +0100] #0 C:\xampp\htdocs\cms\model\entradamodel.php(43): PDOStatement->execute()
+#1 C:\xampp\htdocs\cms\controller\iniciocontroller.php(31): EntradaModel->Filtrocate(NULL)
+#2 C:\xampp\htdocs\cms\core\frontcontroller.php(80): InicioController->BusquedaCate()
+#3 C:\xampp\htdocs\cms\index.php(26): FrontController->__CONSTRUCT()
+#4 {main}
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '/INNER JOIN categoria c on c.id=p.Categoria_id WHERE p.Categoria_id=''  ORDER BY' at line 2
+[Fri, 27 Apr 2018 07:56:00 +0100] #0 C:\xampp\htdocs\cms\model\entradamodel.php(43): PDOStatement->execute()
+#1 C:\xampp\htdocs\cms\controller\iniciocontroller.php(31): EntradaModel->Filtrocate('1')
+#2 C:\xampp\htdocs\cms\core\frontcontroller.php(80): InicioController->BusquedaCate()
+#3 C:\xampp\htdocs\cms\index.php(26): FrontController->__CONSTRUCT()
+#4 {main}
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '/INNER JOIN categoria c on c.id=p.Categoria_id WHERE p.Categoria_id='1'  ORDER B' at line 2
+[Fri, 27 Apr 2018 07:56:10 +0100] #0 C:\xampp\htdocs\cms\model\entradamodel.php(43): PDOStatement->execute()
+#1 C:\xampp\htdocs\cms\controller\iniciocontroller.php(31): EntradaModel->Filtrocate(NULL)
+#2 C:\xampp\htdocs\cms\core\frontcontroller.php(80): InicioController->BusquedaCate()
+#3 C:\xampp\htdocs\cms\index.php(26): FrontController->__CONSTRUCT()
+#4 {main}
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '/INNER JOIN categoria c on c.id=p.Categoria_id WHERE p.Categoria_id=''  ORDER BY' at line 2
+[Fri, 27 Apr 2018 07:56:13 +0100] #0 C:\xampp\htdocs\cms\model\entradamodel.php(43): PDOStatement->execute()
+#1 C:\xampp\htdocs\cms\controller\iniciocontroller.php(31): EntradaModel->Filtrocate('1')
+#2 C:\xampp\htdocs\cms\core\frontcontroller.php(80): InicioController->BusquedaCate()
+#3 C:\xampp\htdocs\cms\index.php(26): FrontController->__CONSTRUCT()
+#4 {main}
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '/INNER JOIN categoria c on c.id=p.Categoria_id WHERE p.Categoria_id='1'  ORDER B' at line 2
+[Fri, 27 Apr 2018 07:56:51 +0100] #0 C:\xampp\htdocs\cms\model\entradamodel.php(43): PDOStatement->execute()
+#1 C:\xampp\htdocs\cms\controller\iniciocontroller.php(31): EntradaModel->Filtrocate(NULL)
+#2 C:\xampp\htdocs\cms\core\frontcontroller.php(80): InicioController->BusquedaCate()
+#3 C:\xampp\htdocs\cms\index.php(26): FrontController->__CONSTRUCT()
+#4 {main}
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '/INNER JOIN categoria c on c.id=p.Categoria_id WHERE p.Categoria_id=''  ORDER BY' at line 2
+[Fri, 27 Apr 2018 07:56:53 +0100] #0 C:\xampp\htdocs\cms\model\entradamodel.php(43): PDOStatement->execute()
+#1 C:\xampp\htdocs\cms\controller\iniciocontroller.php(31): EntradaModel->Filtrocate('1')
+#2 C:\xampp\htdocs\cms\core\frontcontroller.php(80): InicioController->BusquedaCate()
+#3 C:\xampp\htdocs\cms\index.php(26): FrontController->__CONSTRUCT()
+#4 {main}
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '/INNER JOIN categoria c on c.id=p.Categoria_id WHERE p.Categoria_id='1'  ORDER B' at line 2
+[Fri, 27 Apr 2018 08:20:53 +0100] #0 C:\xampp\htdocs\cms\model\entradamodel.php(81): PDOStatement->execute()
+#1 C:\xampp\htdocs\cms\controller\iniciocontroller.php(16): EntradaModel->categoria()
+#2 C:\xampp\htdocs\cms\core\frontcontroller.php(80): InicioController->Index()
+#3 C:\xampp\htdocs\cms\index.php(26): FrontController->__CONSTRUCT()
+#4 {main}
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'ORDER BY id' at line 1

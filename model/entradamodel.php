@@ -31,7 +31,26 @@ class EntradaModel extends DataAccessLayer
 		//echo var_dump($r);
 		return $r;
 	}
+	public function Filtrocate($filtro)
+	{
+		$r = null;
+		try
+		{
+			$db = $this->Link
+			          ->prepare("SELECT * FROM entrada e INNER JOIN entradacategoria p on e.id=p.Entrada_id INNER JOIN categoria c on c.id=p.Categoria_id WHERE p.Categoria_id='$filtro' or 0='$filtro'  ORDER BY Fecha DESC LIMIT 20");
 
+			$db->execute();
+			$r = $db->fetchAll(PDO::FETCH_OBJ);
+		} catch (Exception $e) {
+			BaseHelper::ELog($e);
+		}
+		//echo var_dump($r);
+		//select * from entrada e INNER JOIN entradacategoria p on e.id=p.Entrada_id 
+		//INNER JOIN categoria c on c.id=p.Categoria_id
+
+
+		return $r;
+	}
 	public function Ultimos($tipo=2)
 	{
 		$r = null;
@@ -40,6 +59,24 @@ class EntradaModel extends DataAccessLayer
 		{
 			$db = $this->Link
 			          ->prepare("SELECT * FROM entrada WHERE Tipo = $tipo ORDER BY Fecha DESC LIMIT 20");
+
+			$db->execute();
+			$r = $db->fetchAll(PDO::FETCH_OBJ);
+		} catch (Exception $e) {
+			BaseHelper::ELog($e);
+		}
+
+		return $r;
+	}
+
+	public function categoria()
+	{
+		$r = null;
+
+		try
+		{
+			$db = $this->Link
+			          ->prepare("SELECT * FROM categoria  ORDER BY id ");
 
 			$db->execute();
 			$r = $db->fetchAll(PDO::FETCH_OBJ);
