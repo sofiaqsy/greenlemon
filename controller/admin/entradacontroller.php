@@ -21,6 +21,10 @@
 			else $this->LoadView();
 		}
 
+		
+
+
+
 		public function Ver()
 		{
 			$this->Attach['Entrada'] = isset($_REQUEST['id']) ?

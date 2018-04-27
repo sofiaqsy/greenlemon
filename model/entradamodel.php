@@ -32,6 +32,27 @@ class EntradaModel extends DataAccessLayer
 		return $r;
 	}
 
+	public function Cantidad()
+	{
+		$r = null;
+
+		try
+		{
+			$db = $this->Link
+			          ->prepare("SELECT COUNT(*) FROM entrada WHERE Tipo=1
+									UNION
+									SELECT COUNT(*) FROM entrada WHERE Tipo=2");
+
+			$db->execute();
+			$r = $db->fetchAll(PDO::FETCH_OBJ);
+		} catch (Exception $e) {
+			BaseHelper::ELog($e);
+		}
+
+		return $r;
+
+	}
+
 	public function Ultimos($tipo=2)
 	{
 		$r = null;

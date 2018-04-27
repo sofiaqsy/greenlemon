@@ -14,8 +14,8 @@
 	<div class="panel panel-default">
 	  <div class="panel-heading">Entradas</div>
 	  <ul class="list-group">
-			<li class="list-group-item"><a href="<?php echo $this->BaseUrl('index.php/admin/entrada/listar/?tipo=1'); ?>">Páginas <span class="badge pull-right">xx publicaciones</span></a></li>
-	    <li class="list-group-item"><a href="<?php echo $this->BaseUrl('index.php/admin/entrada/listar/?tipo=2'); ?>">Publicaciones<span class="badge pull-right">xx publicaciones</span></a></li>
+			<li class="list-group-item"><a href="<?php echo $this->BaseUrl('index.php/admin/entrada/listar/?tipo=1'); ?>">Páginas <span class="badge pull-right"><?php echo $this->Attach['publicaciones'][0]['COUNT(*)'] ?> publicaciones</span></a></li>
+	    <li class="list-group-item"><a href="<?php echo $this->BaseUrl('index.php/admin/entrada/listar/?tipo=2'); ?>">Publicaciones<span class="badge pull-right"><?php echo $this->Attach['publicaciones'][1]['COUNT(*)'] ?> publicaciones</span></a></li>
 	  </ul>
 	  <div class="panel-heading">Publicaciones populares</div>
 	  <ul class="list-group">
